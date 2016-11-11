@@ -1,0 +1,20 @@
+ansible-dockermgr-01 ansible_ssh_host=172.28.128.61
+ansible-dockermgr-02 ansible_ssh_host=172.28.128.62
+ansible-dockermgr-03 ansible_ssh_host=172.28.128.63
+ansible-dockernode-01 ansible_ssh_host=172.28.128.64
+ansible-dockernode-02 ansible_ssh_host=172.28.128.65
+ansible-dockernode-03 ansible_ssh_host=172.28.128.66
+
+[dockermanagers]
+ansible-dockermgr-01
+ansible-dockermgr-02
+ansible-dockermgr-03
+
+[dockernodes]
+ansible-dockernode-01
+ansible-dockernode-02
+ansible-dockernode-03
+
+[datacenter:children]
+dockermanagers
+dockernodes
